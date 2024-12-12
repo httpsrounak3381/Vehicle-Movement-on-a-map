@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vehicle Movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        @media only screen and (max-width: 600px) {
+            .controls {
+                bottom: 45vh !important;
+            }
+        }
+        
+        #map {
+            height: 600px;
+        }
+        
+        .car-icon {
+            font-size: 48px;
+            color: red;
+        }
+        
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div class="controls">
+        <select id="trip-select">
+            <option value="today">Today's Trip</option>
+            <option value="yesterday">Yesterday's Trip</option>
+            <option value="last-week">Last Week's Ride</option>
+        </select>
+        <button id="show-route">Show Route</button>
+        <button id="start-movement">Start Movement</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
